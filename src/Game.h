@@ -10,6 +10,7 @@
 
 enum class Currency { USD, IDR, JPY };
 
+template<typename T>
 class Game {
     std::string name;
     double price;

@@ -4,41 +4,53 @@
 
 #include "Game.h"
 
-Game::Game() {}
+template<typename T>
+Game<T>::Game() {}
 
-Game::Game(const std::string &name, double price, double tax) : name(name), price(price), tax(tax) {}
+template<typename T>
+Game<T>::Game(const std::string &name, double price, double tax) : name(name), price(price), tax(tax) {}
 
-Game::~Game() {}
+template<typename T>
+Game<T>::~Game() {}
 
-const std::string &Game::getName() const {
+template<typename T>
+const std::string &Game<T>::getName() const {
     return name;
 }
 
-void Game::setName(const std::string &name) {
+template<typename T>
+void Game<T>::setName(const std::string &name) {
     Game::name = name;
 }
 
-double Game::getPrice() const {
+template<typename T>
+double Game<T>::getPrice() const {
     return price;
 }
 
-void Game::setPrice(double price) {
+template<typename T>
+void Game<T>::setPrice(double price) {
     Game::price = price;
 }
 
-double Game::getTax() const {
+template<typename T>
+double Game<T>::getTax() const {
     return tax;
 }
 
-void Game::setTax(double tax) {
+template<typename T>
+void Game<T>::setTax(double tax) {
     Game::tax = tax;
 }
 
-double Game::discount() { return getPrice(); }
+template<typename T>
+double Game<T>::discount() { return getPrice(); }
 
-double Game::calculatePriceWithTax(Currency var) { return getPrice() - (getPrice() * discount());}
+template<typename T>
+double Game<T>::calculatePriceWithTax(Currency var) { return getPrice() - (getPrice() * discount());}
 
-std::string Game::toString() const{
+template<typename T>
+std::string Game<T>::toString() const{
     std::ostringstream output;
     output << std::fixed << std::setprecision(2);
     output << "Game Name: " << getName()

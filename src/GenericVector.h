@@ -14,6 +14,7 @@ public:
     T last() ;
     bool empty() ;
    T first();
+   int size();
 };
 
 template<typename T>
@@ -44,3 +45,7 @@ T GenericVector<T>::first() {
     Gvector.front();
 }
 
+template<typename T>
+int GenericVector<T>::size (){
+    Gvector.size();
+}

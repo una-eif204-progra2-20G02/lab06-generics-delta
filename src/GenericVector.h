@@ -15,6 +15,7 @@ public:
     bool empty() ;
    T first();
    int size();
+   T returnElement(int);
 };
 
 template<typename T>
@@ -48,4 +49,10 @@ T GenericVector<T>::first() {
 template<typename T>
 int GenericVector<T>::size (){
     Gvector.size();
+}
+
+template<typename T>
+T GenericVector<T>::returnElement(int position){
+    assert(position<Gvector.size());
+    Gvector[position];
 }

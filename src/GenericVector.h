@@ -5,6 +5,7 @@
 #include<string>
 #include <vector>
 #include<cassert>
+using namespace std;
 
 template<typename T>
 class GenericVector{
@@ -13,9 +14,9 @@ private:
 public:
     void push(T elemento);
     void pop();
-    T top() ;
+    T last() ;
     bool empty() ;
-    string toString();
+   T first();
 };
 
 template<typename T>
@@ -30,7 +31,7 @@ void GenericVector<T>::pop() {
 }
 
 template<typename T>
-T GenericVector<T>::top() {
+T GenericVector<T>::last() {
     assert(!Gvector.empty());
     return Gvector.back();
 }
@@ -39,3 +40,10 @@ template<typename T>
 bool GenericVector<T>::empty()  {
     return Gvector.empty();
 }
+
+template<typename T>
+T GenericVector<T>::first() {
+    assert(!Gvector.empty());
+    Gvector.front();
+}
+

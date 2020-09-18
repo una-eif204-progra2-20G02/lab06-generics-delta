@@ -34,3 +34,8 @@ T GenericVector<T>::top() {
     assert(!Gvector.empty());
     return Gvector.back();
 }
+
+template<typename T>
+bool GenericVector<T>::empty()  {
+    return Gvector.empty();
+}

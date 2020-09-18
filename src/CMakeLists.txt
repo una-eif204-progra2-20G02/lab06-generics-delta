@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.14)
-project(lab02-oop)
+set(BINARY ${CMAKE_PROJECT_NAME})
 
-set(CMAKE_CXX_STANDARD 17)
+file(GLOB_RECURSE SOURCES LIST_DIRECTORIES true *.h *.cpp)
 
-set(SOURCE_FILES Main.cpp Person.h Professor.cpp Professor.h
-        Administrative.cpp Administrative.h University.cpp University.h)
+set(SOURCES ${SOURCES})
 
-add_executable(lab02-oop ${SOURCE_FILES})
+add_executable(${BINARY}_run ${SOURCES})
+
+add_library(${BINARY}_lib STATIC ${SOURCES})

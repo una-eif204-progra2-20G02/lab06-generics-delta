@@ -37,7 +37,7 @@ void Administrative::set_monthly_salary(double monthlySalary) {
     Administrative::monthly_salary = monthlySalary;
 }
 
-double Administrative::salary() const{}
+double Administrative::salary() const{return salary();}
 
 string Administrative::to_string() const{
   stringstream x;

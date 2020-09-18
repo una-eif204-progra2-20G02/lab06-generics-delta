@@ -48,11 +48,11 @@ T GenericVector<T>::first() {
 
 template<typename T>
 int GenericVector<T>::size (){
-    Gvector.size();
+    return Gvector.size();
 }
 
 template<typename T>
 T GenericVector<T>::returnElement(int position){
-    assert(position<Gvector.size());
-    Gvector[position];
+    assert(position<=Gvector.size());
+    return Gvector[position];
 }

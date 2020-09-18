@@ -5,40 +5,45 @@
 #ifndef LAB02_OOP_UNIVERSITY_H
 #define LAB02_OOP_UNIVERSITY_H
 
-#include <vector>
 #include "Professor.h"
 #include "Administrative.h"
+#include "GenericVector.h"
 
 class University {
- private:
-  string name;
+    string name;
+    GenericVector<Professor> professor_List;
+    GenericVector<Administrative> administrative_List;
+    Professor professor;
+    Administrative administrative;
 
-  vector<Professor> professor_List;
-  vector<Administrative> administrative_List;
-  
-  Professor professor;
-  Administrative administrative;
+public:
+    University();
 
- public:
-  University();
-  University(string);
-  University(string,Professor,Administrative);
+    University(string);
 
-  string get_name();
-  void set_name(string);
+    University(string, Professor, Administrative);
 
-  Professor get_Professor();
-  void  set_Professor(Professor);
-  
-  Administrative get_Administrative();
-  void set_Administrative(Administrative);
+    string get_name();
 
-  std::vector<Professor> get_Professor_List();
-  std::vector<Administrative> get_Administrative_List();
+    void set_name(string);
 
-  void Add_Professor(Professor);
-  void Add_Administrative(Administrative);
+    Professor get_Professor();
 
-  string toString();
+    void set_Professor(Professor);
+
+    Administrative get_Administrative();
+
+    void set_Administrative(Administrative);
+
+    GenericVector<Professor> get_Professor_List();
+
+    GenericVector<Administrative> get_Administrative_List();
+
+    void Add_Professor(Professor);
+
+    void Add_Administrative(Administrative);
+
+    string toString();
 };
+
 #endif //LAB02_OOP_UNIVERSITY_H

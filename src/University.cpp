@@ -23,33 +23,33 @@ void  University::set_Professor(Professor Prof){professor = Prof;}
 Administrative University::get_Administrative(){return administrative;}
 void University::set_Administrative(Administrative Admin){ administrative=Admin;}
 
-std::vector<Professor> University::get_Professor_List(){
-  return std::vector<Professor>(professor_List);
+GenericVector<Professor> University::get_Professor_List(){
+  return GenericVector<Professor>(professor_List);
 }
 
-std::vector<Administrative> University::get_Administrative_List(){
-  return std::vector<Administrative>(administrative_List);
+GenericVector<Administrative> University::get_Administrative_List(){
+  return GenericVector<Administrative>(administrative_List);
 }
 
 void University::Add_Professor(Professor prof){
-  professor_List.push_back(prof);
+  professor_List.push(prof);
 }
 
 void University::Add_Administrative(Administrative admin) {
-  administrative_List.push_back(admin);
+  administrative_List.push(admin);
 }
 
 string University::toString(){
   stringstream s;
 
-  for(Professor element : professor_List){
-    s<<element.to_string()<<std::endl;
+  for(int i=0;i<professor_List.size();i++){
+      s<<professor_List.returnElement(i).to_string();
   }
 
   s<<"\n\n";
 
-  for(Administrative element : administrative_List){
-    s<<element.to_string()<<std::endl;
+  for(int j=0;j<professor_List.size();j++){
+    s<<administrative_List.returnElement(j).to_string();
   }
 
   return s.str();

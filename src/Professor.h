@@ -4,17 +4,31 @@
 
 #ifndef LAB02_OOP_PROFESSOR_H
 #define LAB02_OOP_PROFESSOR_H
-#include "Person.h"
 
-class Professor: public Person, public error_code {
+#include <iostream>
+#include <sstream>
+using namespace std;
+
+class Professor{
   private:
    double monthly_salary;
    double commission_rate;
+    string nom;
+    string apellido;
+    int id;
   
  public:
-  //Professor(double,double);
   Professor(string = " ",string = " ",int = 0,double = 0,double = 0);
   virtual ~Professor();
+
+  string getNombre();
+  void setNombre(string);
+
+  string getApellido();
+  void setApellido(string);
+
+  int getId();
+  void setId(int);
 
   double get_monthly_salary() const;
   void set_monthly_salary(double);

@@ -53,6 +53,6 @@ int GenericVector<T>::size (){
 
 template<typename T>
 T GenericVector<T>::returnElement(int position){
-    assert(position<=Gvector.size());
+    assert(position<Gvector.size());
     return Gvector[position];
 }

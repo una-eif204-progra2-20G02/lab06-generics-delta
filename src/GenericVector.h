@@ -4,6 +4,7 @@
 #include <iostream>
 #include<string>
 #include <vector>
+#include<cassert>
 
 template<typename T>
 class GenericVector{
@@ -20,4 +21,10 @@ public:
 template<typename T>
 void GenericVector<T>::push (T elemento){
     Gvector.push_back(elemento);
+}
+
+template<typename T>
+void GenericVector<T>::pop() {
+    assert(!Gvector.empty());
+    Gvector.pop_back();
 }

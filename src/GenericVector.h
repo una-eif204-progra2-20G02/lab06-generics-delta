@@ -1,6 +1,3 @@
-#ifndef LAB02_OOP_PERSON_H
-#define LAB02_OOP_PERSON_H
-
 #include <iostream>
 #include<string>
 #include <vector>

@@ -28,3 +28,9 @@ void GenericVector<T>::pop() {
     assert(!Gvector.empty());
     Gvector.pop_back();
 }
+
+template<typename T>
+T GenericVector<T>::top() {
+    assert(!Gvector.empty());
+    return Gvector.back();
+}

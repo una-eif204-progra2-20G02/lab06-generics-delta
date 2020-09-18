@@ -1,17 +1,14 @@
 #ifndef LAB02_OOP_PERSON_H
 #define LAB02_OOP_PERSON_H
 
-
-#include <sstream>
-#include <ostream>
 #include <iostream>
-using namespace std;
+#include<string>
 #include <vector>
 
 template<typename T>
 class GenericVector{
 private:
-    std::vector<T> vector;
+    std::vector<T> Gvector;
 public:
     void push(T elemento);
     void pop();
@@ -19,3 +16,8 @@ public:
     bool empty() ;
     string toString();
 };
+
+template<typename T>
+void GenericVector<T>::push (T elemento){
+    Gvector.push_back(elemento);
+}

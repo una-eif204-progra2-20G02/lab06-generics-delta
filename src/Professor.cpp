@@ -11,13 +11,37 @@
   commission_rate=commission;
 }*/
 
-Professor::Professor(string nom_, string appellido_, int id_,double salary,double commission):
-Person(nom_,appellido_,id_),monthly_salary(salary),commission_rate(commission){}
+Professor::Professor(string nom_, string appellido_, int id_,double salary,double commission)
+:nom(nom_),apellido(apellido),id(id_),monthly_salary(salary),commission_rate(commission){}
 
 Professor::~Professor(){ }
 
 void Professor::set_monthly_salary(double month){
     monthly_salary=month;
+}
+
+string Professor::getNombre() {
+    return nom;
+}
+
+void Professor::setNombre(string nom_) {
+    nom=nom_;
+}
+
+string Professor::getApellido() {
+    return apellido;
+}
+
+void Professor::setApellido(string apellido_) {
+    apellido=apellido_;
+}
+
+int Professor::getId() {
+    return id;
+}
+
+void Professor::setId(int id_) {
+    id=id_;
 }
 
 double Professor::get_monthly_salary()const{

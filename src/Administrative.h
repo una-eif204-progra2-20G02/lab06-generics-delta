@@ -6,7 +6,7 @@
 #define LAB02_OOP_ADMINISTRATIVE_H
 #include "Person.h"
 
-class Administrative: public Person {
+class Administrative{
   double monthly_salary;
 
 public:

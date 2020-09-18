@@ -1,10 +1,9 @@
-set(BINARY ${CMAKE_PROJECT_NAME})
+cmake_minimum_required(VERSION 3.14)
+project(lab02-oop)
 
-# add_executable(ExampleProject main.cpp file1.cpp file1.h)
-file(GLOB_RECURSE SOURCES LIST_DIRECTORIES true *.h *.cpp) #simplification
+set(CMAKE_CXX_STANDARD 17)
 
-set(SOURCES ${SOURCES})
+set(SOURCE_FILES Main.cpp Person.cpp Person.h Professor.cpp Professor.h
+        Administrative.cpp Administrative.h University.cpp University.h)
 
-add_executable(${BINARY}_run ${SOURCES})
-
-add_library(${BINARY}_lib STATIC ${SOURCES})
+add_executable(lab02-oop ${SOURCE_FILES})
